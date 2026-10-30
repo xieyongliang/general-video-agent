@@ -68,7 +68,7 @@ def main():
             'environment_id': args.environment_id,
             'resources': [{'type': 'file', 'file_id': args.reference_file_id,
                            'mount_path': 'references.zip'}],
-            'title': 'Handmade MA ecommerce video'})
+            'title': 'General video agent ecommerce video'})
     else:
         sid = urllib.parse.quote(args.session_id, safe='')
         if args.command == 'submit':

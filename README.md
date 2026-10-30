@@ -1,4 +1,4 @@
-# 手搓视频 MA
+# 通用视频 Agent
 
 从“暮山保温杯电商广告”实验整理的最小客户端。使用火山中国站通用 Managed Agent (`ark_agent_preview`)、Evolving 规划模型及绑定的 Seedance / Seedream 工具。
 
