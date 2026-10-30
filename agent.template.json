@@ -1,0 +1,156 @@
+{
+  "base_agent": "ark_agent_preview",
+  "model": {
+    "id": "doubao-seed-evolving-latest-version",
+    "service_tier": "default",
+    "thinking": "enabled",
+    "reasoning_effort": "high",
+    "protocol": "ark_responses"
+  },
+  "tools": [
+    {
+      "type": "agent_toolset_20260916",
+      "configs": [
+        {
+          "name": "bash",
+          "enabled": true,
+          "permission_policy": {
+            "type": "always_allow"
+          }
+        },
+        {
+          "name": "read",
+          "enabled": true,
+          "permission_policy": {
+            "type": "always_allow"
+          }
+        },
+        {
+          "name": "write",
+          "enabled": true,
+          "permission_policy": {
+            "type": "always_allow"
+          }
+        },
+        {
+          "name": "edit",
+          "enabled": true,
+          "permission_policy": {
+            "type": "always_allow"
+          }
+        },
+        {
+          "name": "glob",
+          "enabled": true,
+          "permission_policy": {
+            "type": "always_allow"
+          }
+        },
+        {
+          "name": "grep",
+          "enabled": true,
+          "permission_policy": {
+            "type": "always_allow"
+          }
+        },
+        {
+          "name": "web_fetch",
+          "enabled": true,
+          "permission_policy": {
+            "type": "always_allow"
+          }
+        },
+        {
+          "name": "web_search",
+          "enabled": false,
+          "permission_policy": {
+            "type": "always_allow"
+          }
+        }
+      ],
+      "default_config": {
+        "enabled": true,
+        "permission_policy": {
+          "type": "always_allow"
+        }
+      },
+      "name": "agent_toolset_20260916"
+    },
+    {
+      "type": "agent_toolset_multimodal_20260825",
+      "configs": [
+        {
+          "name": "video_generate",
+          "enabled": true,
+          "permission_policy": {
+            "type": "always_allow"
+          },
+          "models": [
+            {
+              "name": "doubao-seedance-2-5",
+              "id": "${SEEDANCE_ENDPOINT_ID}",
+              "version": "260628"
+            }
+          ]
+        },
+        {
+          "name": "image_generate",
+          "enabled": true,
+          "permission_policy": {
+            "type": "always_allow"
+          },
+          "models": [
+            {
+              "name": "doubao-seedream-5-0-pro",
+              "id": "${SEEDREAM_ENDPOINT_ID}",
+              "version": "260628"
+            }
+          ]
+        },
+        {
+          "name": "visual_search",
+          "enabled": true,
+          "permission_policy": {
+            "type": "always_allow"
+          }
+        },
+        {
+          "name": "compose_video",
+          "enabled": true,
+          "permission_policy": {
+            "type": "always_allow"
+          }
+        },
+        {
+          "name": "general_search",
+          "enabled": true,
+          "permission_policy": {
+            "type": "always_allow"
+          }
+        },
+        {
+          "name": "todo_write",
+          "enabled": true,
+          "permission_policy": {
+            "type": "always_allow"
+          }
+        }
+      ],
+      "default_config": {
+        "enabled": false,
+        "permission_policy": {
+          "type": "always_allow"
+        }
+      },
+      "name": "agent_toolset_multimodal_20260825"
+    }
+  ],
+  "context_management": [
+    {
+      "type": "compaction",
+      "compact_threshold": 192000
+    }
+  ],
+  "scene": "default",
+  "name": "handmade-video-ma"
+}
